@@ -10,3 +10,5 @@ As soon as the file MLC_classification.mat is created the data can be evaluated 
 The structure of the output file MLC_classification.mat is the following:
 MLC_classification.mat variable list:
 number_i, date, hmax, cloud_layers, nocloud_layers, seeding, fallbegin, fallend, Zbelow, Zbetween, Zabove, Seeddiv, ML, MLjn, noML, Visual
+ 
+ 
