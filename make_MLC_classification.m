@@ -71,7 +71,7 @@ Cloudnet_1_calcN                                    %This function prepares the 
 %MLC_classification.mat as a structure. Then there is no need to do the loop again over all days. Instead 
 %load MLC_classification.mat in the beginning. Choose a random single day and run make_MLC_classification
 %without the loop (if you e.g. want to plot pie plots). 
-%If you use/do not use the loop, uncomment/comment out the lines 81 (for i=...) and 123 (end). 
+%If you use/do not use the loop, uncomment/comment out the lines 78 (for i=...) and 121 (end). 
 %Each day is given an index 'i', which is kept for the entire calculation (i=1=> 9.6.2016).
     
 i=350; %13, 157;                                            %Single day, 147=3.Nov 2017                            
