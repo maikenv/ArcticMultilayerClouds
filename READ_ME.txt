@@ -32,8 +32,8 @@ Ex1: Creates the output file for one example day
 3. uncomment Cloudnet_4_plot_sectionlines
 4. run 1make_MLC_classification
 
-Ex2: Plot the pie chart for a one year analysed time period
-1. load('MLC_classification.mat')
+Ex2: Plot the pie chart for the 1-year analysed time period
+1. load('MLC_classification_100_msub100.mat')
 2. uncomment Evaluation_4_RC_pie
 3. run 1make_MLC_classification
 
