@@ -4,7 +4,7 @@
 
 if NoRasoNum==0                                %only if a raso exists  
 
-mkdir('Plots','4_Raso_lines');                 %create folder for plots 
+mkdir('Plots','2_Raso_lines');                 %create folder for plots 
 
 if numcloud_i>=2                               %if min 2 cloud layers exists
    
