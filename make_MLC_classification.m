@@ -13,7 +13,7 @@
 %2.Name: Used as ending for MLC_classification.mat and for saved plots
 %3.Date: Defines the time period of the classification.
 %4.Single day or loop over time period
-%5.Radiosonde evaluation
+%5.Radiosonde (Raso) evaluation
 %6.Sublimation calculation 
 %7.Cloudnet (Radar) evaluation as additional information
 %8.Pieplots 
