@@ -73,7 +73,7 @@ Cloudnet_1_calcN                                    %This function prepares the 
 %loop, uncomment/comment out the lines 77 (for i=...) and 120 (end). Each day is given an index 'i', which is kept for the 
 %entire calculation (i=1=> 9.6.2016).
     
-i=350; %13, 157;                                            %Single day, 147=3.Nov 2017                            
+i=147; %13, 157;                                            %Single day, 147=3.Nov 2017                            
 %for i=1:365                                                %Loop, std: 1:365
 
     %Output for each day:
