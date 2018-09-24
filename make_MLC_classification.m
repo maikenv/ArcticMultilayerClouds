@@ -61,10 +61,7 @@ name=strxcat(Rsize,'_msub',minsub');                    %Used as Std
 %1-year dataset:
 ii=1:365;                                           %Dataset length [days]: Std:1:365
 NCloudnet=datenum(2016,06,9+ii,00,00,00);           %Dataset start date (use one day before actual start date), [year, month, day] Std: 2016,06,9 => 10.6.16-9.6.17 
-%24.5-year dataset:
-%ii=[1:8926];                                       %Alternative: until 9.6.2017
-%NCloudnet=datenum(1993,01,00+ii,00,00,00);         %Alternative
-%datestr(NCloudnet);                                %This is only for control to display chosen time period.                
+%datestr(NCloudnet);                                %This is only for control to display the chosen time period.                
 
 Cloudnet_1_calcN                                    %This function prepares the time for further use
 
