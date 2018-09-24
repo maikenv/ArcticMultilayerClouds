@@ -4,7 +4,7 @@
 
 %This is the main program of the classification algorithm. The code is written in Matlab. The dataset is analysed for
 %seeding/non-seeding multilayer clouds from day to day. The general structure is that one day (i) is evaluated and the 
-%resulting information is written into the structure MLC_classification.mat. As soon as MLC_classification.mat is filled
+%resulting information is written into the structure MLC_classification...mat. As soon as MLC_classification.mat is filled
 %for one year (loop), the rest of the evaluation is done based on MLC_classification.mat and the loop can be replaced 
 %by any single day. 
 %The structure of this program is the following:
