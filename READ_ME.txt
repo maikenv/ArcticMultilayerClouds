@@ -4,8 +4,8 @@ written by Maiken Vassel, 2017-2018
 
 The following programmes can be used to classify multilayer clouds based on radiosonde and radar data. They can be further separated in seeding and non-seeding multilayer cloud cases. Detailed information about the assumptions the classification algorithm is based on, and one example study using this algorithm can be found in the following publication: Vassel, M., Ickes, L., Maturilli, M., and Hoose, C.: Classification of Arctic multilayer clouds using radiosonde and radar data, Atmos. Chem. Phys. Discuss., https://doi.org/10.5194/acp-2018-774, in review, 2018. Please refer to this publication when using this programme suite. 
 
-The main program is called make_MLC_classification. It creates a file containing the information of how many clouds could be found for each radiosonde profile and how many seeding/non-seeding cases exist. The input data for the classification must be stored in the folder Inputdata. You can choose if you want to evaluate an entire year by using the loop or only one single day. The results of each day from the loop are stored in the MLC_classification.mat file. The structure of the outputfile MLC_classification.mat is explained below.
-As soon as the file MLC_classification.mat is created the data can be further evaluated. To plot the data the specific plot-routine must be uncommented in make_MLC_classification and the main program make_MLC_classification must be run again. All generated plots are stored in the folder Plots.
+The main program is called 1make_MLC_classification. It creates a file containing the information of how many clouds could be found for each radiosonde profile and how many seeding/non-seeding cases exist. The input data for the classification must be stored in the folder Inputdata. You can choose if you want to evaluate an entire year by using the loop or only one single day. The results of each day from the loop are stored in the MLC_classification.mat file. The structure of the outputfile MLC_classification.mat is explained below.
+As soon as the file MLC_classification.mat is created the data can be further evaluated. To plot the data the specific plot-routine must be uncommented in 1make_MLC_classification and the main program 1make_MLC_classification must be run again. All generated plots are stored in the folder Plots.
 
 The structure/variable list of the output file MLC_classification.mat is the following:
 number_i:	Each day is given a number, from 1 to 365.
@@ -30,12 +30,12 @@ Ex1: Creates the output file for one example day
 1. uncomment/set i=147
 2. comment out 'for i=1:365' and 'end'
 3. uncomment Cloudnet_4_plot_sectionlines
-4. run make_MLC_classification
+4. run 1make_MLC_classification
 
 Ex2: Plot the pie chart for a one year analysed time period
 1. load('MLC_classification.mat')
 2. uncomment Evaluation_4_RC_pie
-3. run make_MLC_classification
+3. run 1make_MLC_classification
 
 
 
