@@ -27,7 +27,7 @@ nocloud_layers: Number of subsaturated layers.
 Seeding: 	0= no seeding, 1= seeding inside noncloudy layer. Dimension of variable Seeding: nocloud_layers.
 fallbegin:   	Heigth of cloud base from where the ice crystal begins to fall. Dimension of variable fallbegin: nocloud_layers
 fallend: 	Heigth of next cloudtop until where the ice crystal falls reaching the next supersaturated layer. Dimension of variable
-fallbegin: nocloud_layers
+fallbegin:     nocloud_layers
 Zbeteen:       0= no radar reflectivity (Z) inside nocloud_layer. 1= Z inside nocloud_layer.
 Zabove:        0= no Z inside cloud layer above. 1= Z inside cloud layer above.
 Zbelow:        0= no Z inside cloud layer below. 1= Z inside cloud layer below.
@@ -37,7 +37,7 @@ ML=29: non-seeding and no MLC
 MLjn:		Sorts MLjn=31: only seeding occurrs but no MLC, MLjn=32: non-seeding occurrs, MLjn=33: both seeding and non-seeding
 occurrs, MLjn=34: no MLC occurs
 noML:		Case where there is no ML. noML=NaN: no MLC, noML=0:no cloudlayer, noML=1: single cloud layer  
-Visual:		Manual visual detection taken from 'Inputdata/Visual.txt' 
+Visual:        Manual visual detection taken from 'Inputdata/Visual.txt' 
 
 Examples:
 Ex1: Creates the output file for one example day 
