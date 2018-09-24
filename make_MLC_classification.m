@@ -66,13 +66,12 @@ NCloudnet=datenum(2016,06,9+ii,00,00,00);           %Dataset start date (use one
 Cloudnet_1_calcN                                    %This function prepares the time for further use
 
 %4.Single day or loop
-%Here you specify if you want to analyse only a single day (if you want a plot only for a single day) or do 
-%the full loop over the 1-year dataset. If you have done the loop once, it will be saved in 
-%MLC_classification.mat as a structure. Then there is no need to do the loop again over all days. Instead 
-%load MLC_classification.mat in the beginning. Choose a random single day and run make_MLC_classification
-%without the loop (if you e.g. want to plot pie plots). 
-%If you use/do not use the loop, uncomment/comment out the lines 78 (for i=...) and 121 (end). 
-%Each day is given an index 'i', which is kept for the entire calculation (i=1=> 9.6.2016).
+%Here you specify if you want to analyse only a single day (if you want a plot only for a single day) or do the full loop
+%over the 1-year dataset. If you have done the loop once, it will be saved in MLC_classification.mat as a structure. Then
+%there is no need to do the loop again over all days. Instead load MLC_classification.mat in the beginning. Choose a random 
+%single day and run make_MLC_classification without the loop (if you e.g. want to plot pie plots). If you use/do not use the 
+%loop, uncomment/comment out the lines 77 (for i=...) and 120 (end). Each day is given an index 'i', which is kept for the 
+%entire calculation (i=1=> 9.6.2016).
     
 i=350; %13, 157;                                            %Single day, 147=3.Nov 2017                            
 %for i=1:365                                                %Loop, std: 1:365
