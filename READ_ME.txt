@@ -28,7 +28,7 @@ Seeding: 	0= no seeding, 1= seeding inside noncloudy layer. Dimension of variabl
 fallbegin:   	Heigth of cloud base from where the ice crystal begins to fall. Dimension of variable fallbegin: nocloud_layers
 fallend: 	Heigth of next cloudtop until where the ice crystal falls reaching the next supersaturated layer. Dimension of variable
 fallbegin: nocloud_layers
-Zbeteen: 	0= no radar reflectivity (Z) inside nocloud_layer. 1= Z inside nocloud_layer.
+Zbeteen:  0= no radar reflectivity (Z) inside nocloud_layer. 1= Z inside nocloud_layer.
 Zabove:   0= no Z inside cloud layer above. 1= Z inside cloud layer above.
 Zbelow:   0= no Z inside cloud layer below. 1= Z inside cloud layer below.
 Seeddiv:	Sorts into different cloud categories: 11,12,13,...,18= seeding, 21,22,23,...,28=non-seeding
