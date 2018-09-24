@@ -6,8 +6,13 @@ mkdir('Plots','3_Sublimation');                                     %in this fol
 
 kmax=MLC_classification(i).nocloud_layers;
 
-for k=1:kmax
+kvec=[1:kmax];
+layervec=fliplr(kvec);
+
+for k=1:kmax                %k number starts counting from bottom 
 %k=1;
+
+    kchose=layervec(k);     %to get the layer number counting from top
 
     figure(k);
     set(gcf,'units','normalized','position',[.5 .5 0.5 0.5]);
@@ -51,8 +56,8 @@ for k=1:kmax
     legend(ax4,'show','Location','northeast');
     grid on;
 
-    suptitle(strxcat('Layer ',k,': Sublimation of a round ice crystal of the radius ',Sublimation(k).initial_cond(5),' mikro m at ',Sublimation(k).initial_cond(3),'hPa, ',Sublimation(k).initial_cond(2)-273.15,'°C and ',Sublimation(k).initial_cond(1),'% RHi'), 'FontSize',8);
-    saveas(gcf,strxcat('Plots/2_Sublimation/',datestr(Raso.N(1),'yyyy-mm-dd'),'_Sublimation_layer',k,'.png'));
+    suptitle(strxcat('Layer ',kchose,': Sublimation of a round ice crystal of the radius ',Sublimation(k).initial_cond(5),' mikro m at ',Sublimation(k).initial_cond(3),'hPa, ',Sublimation(k).initial_cond(2)-273.15,'°C and ',Sublimation(k).initial_cond(1),'% RHi'), 'FontSize',8);
+    saveas(gcf,strxcat('Plots/2_Sublimation/',datestr(Raso.N(1),'yyyy-mm-dd'),'_Sublimation_layer',kchose,'.png'));
 
 end
 
