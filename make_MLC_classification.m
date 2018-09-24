@@ -7,6 +7,7 @@
 %resulting information is written into the structure MLC_classification...mat. As soon as MLC_classification.mat is filled
 %for one year (loop), the rest of the evaluation is done based on MLC_classification.mat and the loop can be replaced 
 %by any single day. 
+
 %The structure of this program is the following:
 %1.Settings for the classification
 %2.Name: Used as ending for MLC_classification.mat and for saved plots
