@@ -17,7 +17,7 @@
 %6.Sublimation calculation 
 %7.Cloudnet (Radar) evaluation as additional information
 %8.Pieplots 
-%9.Skill scores
+
 %Turn on/off specific programs for the specific need.
 
 clearvars -except MLC_classification
@@ -154,18 +154,6 @@ Evaluation_4_RC_calc                        %Preparation of following plots (is 
 %Evaluation_4_RC_histogram                  %Histogram and removing of variables
 %Evaluation_4_RC_histogram_radii            %Histogram with all 3 radius in one
 
-%%
-%9. Skill scores:
-
-Skillscore_1_RasoRadar                                 %Paper nr1: Raso & Radar
-%Skillscore_2_ClassificationVisual                      %compare classification and visual
-Skillscore_3_NonseedingVisual                          %Paper nr2: non-seeding & visual
-%Skillscore_4_SeedingVisual                             %compare seeding & visual
-
-%sort plots into folders:
-%Results_1_sort_plots                                   %choose a case and the selected plots will be made   
-
-%%
 
 
 
