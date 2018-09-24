@@ -2,7 +2,7 @@
 %This is a very simple plot of the Radiosounding.
 
 %The plot is stored in the folder Plots/1_Raso_nolines/.
-dirname='2_Raso_nolines';
+dirname='1_Raso_nolines';
 mkdir(strxcat('Plots/',dirname)); 
 
 if NoRasoNum ==0                   %only if a radiosounding exists at this day-
