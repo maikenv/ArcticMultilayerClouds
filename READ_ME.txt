@@ -39,14 +39,8 @@ occurrs, MLjn=34: no MLC occurs
 noML:		Case where there is no ML. noML=NaN: no MLC, noML=0:no cloudlayer, noML=1: single cloud layer  
 Visual:        Manual visual detection taken from 'Inputdata/Visual.txt' 
 
-Examples:
-Ex1: Creates the output file for one example day 
-1. uncomment/set i=147
-2. comment out 'for i=1:365' and 'end'
-3. uncomment Cloudnet_4_plot_sectionlines
-4. run 1make_MLC_classification
-
-Ex2: Plot the pie chart for the 1-year analysed time period
+Example: 
+Plot the pie chart for the 1-year analysed time period
 1. load('MLC_classification_100_msub100.mat')
 2. uncomment Evaluation_4_RC_pie
 3. run 1make_MLC_classification
