@@ -85,13 +85,10 @@ i=147; %13, 157;                                            %Single day, 147=3.N
     %Here the evaluation of the radiosonde (Raso) data is done.
 
     Raso_1_read                 %Reads the Raso data of the actual day 'i' and writes it in a Raso-structure. 
-    %Raso_2_plot                %A very simple plot of the radiosonde
     Raso_3_layers               %Calculates mean RH for each subsaturated layer and calculates the sublimation/seeding
     %Raso_4_plot_withlines      %A simple plot of the radiosonde, with lines indicating layers
-    layer=1;                    %Specify which subsaturated layer (layer nr starts counting from top) should be used in Raso_5_findposition 
-    %Raso_5_findposition        %Finds the distance/position of the radiosonde away from the radar
-
-    %%
+   
+   %%
     %6.Sublimation calculation plots 
 
     %Sublimation_1_layer            %Plots each subsaturation layer into one separate figure (only one radius)
@@ -107,11 +104,7 @@ i=147; %13, 157;                                            %Single day, 147=3.N
     %7. Including Cloudnet (Radar) for evaluation
 
     Cloudnet_2_read                     %Reads Cloudnet data and writes into structure 
-    %Cloudnet_2_plot                    %Plot: all Cloudnet data (radar reflectivity, doppler velocity, spectral width) of full day
-
     Cloudnet_2_short                    %Reduces the size of Cloudnet structure from 2000 to 400 time steps.
-    %Cloudnet_3_short_plot              %Plot of short Cloutnet time periode.
-
     gap_min=30;                         %This number [min] defines the timeperiod for evaluation of Cloudnet. 
     Cloudnet_4_preparation              %Data preparation: excludes cases where radar and radiosonde do not overlap in time
     Cloudnet_4_evaluation               %Evaluation of Cloudnet. (Defining if cloud above,in between, below)
@@ -132,7 +125,6 @@ Evaluation_1_calc                   %finds indicies for the following pie/histog
 %Evaluation_2_pie                   %Raso-Pie plot                           
 %Evaluation_2_histogram             %Histogram using only Radiosonde.     
 %Evaluation_2_histogram_radii       %Histogram with all 3 radius in one.
-%Evaluation_2_maxfalldist           %finds/calculates the maximum seeding distance
 %Evaluation_2_visual                %Reads and evaluates the manual visual detection
 
 %Deleting variables that are not needed any more:
