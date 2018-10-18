@@ -90,7 +90,6 @@ i=147; %13, 157;                                            %Single day, 147=3.N
    %%
     %6.Sublimation calculation plots 
 
-    %Sublimation_1_layer            %Plots each subsaturation layer into one separate figure (only one radius)
     layer=1;                        %Choose which layer (layer nr starts counting from top) should be plotted in Sublimation_2_radii
     %Sublimation_2_radii            %Plots multiple radii in one plot
 
