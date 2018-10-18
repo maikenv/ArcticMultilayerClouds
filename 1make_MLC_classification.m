@@ -122,7 +122,6 @@ Evaluation_1_calc                   %finds indicies for the following pie/histog
 
 %Only Raso(=Radiosonde):
 %Evaluation_2_pie                   %Raso-Pie plot                           
-%Evaluation_2_histogram             %Histogram using only Radiosonde.     
 %Evaluation_2_histogram_radii       %Histogram with all 3 radius in one.
 %Evaluation_2_visual                %Reads and evaluates the manual visual detection
 
@@ -138,7 +137,6 @@ clear Anz_0cloud Anz_1cloud Anz_both Anz_cloudcover Anz_Nan Anz_nonNan Anz_nonse
 %Raso and Radar (RC) combined:             
 Evaluation_4_RC_calc                        %Preparation of following plots (is included in the two following programs)
 %Evaluation_4_RC_pie                        %Pie-plot        
-%Evaluation_4_RC_histogram                  %Histogram and removing of variables
 %Evaluation_4_RC_histogram_radii            %Histogram with all 3 radius in one
 
 
