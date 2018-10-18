@@ -86,8 +86,7 @@ i=147; %13, 157;                                            %Single day, 147=3.N
 
     Raso_1_read                 %Reads the Raso data of the actual day 'i' and writes it in a Raso-structure. 
     Raso_3_layers               %Calculates mean RH for each subsaturated layer and calculates the sublimation/seeding
-    %Raso_4_plot_withlines      %A simple plot of the radiosonde, with lines indicating layers
-   
+      
    %%
     %6.Sublimation calculation plots 
 
