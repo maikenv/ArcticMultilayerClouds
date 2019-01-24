@@ -48,6 +48,7 @@ minsuper=100.0;             %Minimum thickness of supersaturated layer [m]. Std:
 gap_min=30;                 %This number [min] defines the timeperiod for evaluation of Cloudnet. %Std:30min, for test: 15min
 ending='MHP_WC';            %Defines the kind of ice particle calculation.
                             %MHP_WC: Mitchell, 1994: Hexagonal plate; Witchell, 2008: capacitance
+                            %AG: Aggregate, RC: rimed column, SP: star particle 
 
 %2.Name:
 %Define an name/ending here. This will be used as ending for the struct MLC_classification....mat and
