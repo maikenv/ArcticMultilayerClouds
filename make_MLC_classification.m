@@ -20,8 +20,7 @@
 %9.Skill scores
 %Turn on/off specific programs for the specific need.
 
-%clearvars -except MLC_classification
-%clearvars -except XPstruct
+clearvars -except MLC_classification
 
 close all;
 
@@ -47,7 +46,8 @@ minsub=100;                 %Minimum thickness of subsaturated layer [m]. Std:20
 minsuper=100.0;             %Minimum thickness of supersaturated layer [m]. Std:100
 %uncert=0.0;                 %Raso uncertainty -5.0, 0.0, 5.0
 gap_min=30;                 %This number [min] defines the timeperiod for evaluation of Cloudnet. %Std:30min, for test: 15min
-ending='MHP_WC';              %Defines the kind of ice particle calculation: sphere, SBnew, HKH, HKtP, HKrP, Hb
+ending='MHP_WC';            %Defines the kind of ice particle calculation.
+                            %MHP_WC: Mitchell, 1994: Hexagonal plate; Witchell, 2008: capacitance
 
 %2.Name:
 %Define an name/ending here. This will be used as ending for the struct MLC_classification....mat and
@@ -83,7 +83,7 @@ Cloudnet_1_calcN                                    %This function prepares the 
 %If you use/do not use the loop, uncomment/comment out the lines 81 (for i=...) and 123 (end). 
 %Each day is given an index 'i', which is kept for the entire calculation (i=1=> 9.6.2016).
     
-%i=147; %13, 157;                                            %Single day, 147=3.Nov 2017                            
+%i=147; %13, 157;                                          %Single day, 147=3.Nov 2017                            
 for i=1:365                                                %Loop, std: 1:365
 
     %Output for each day:
@@ -95,22 +95,15 @@ for i=1:365                                                %Loop, std: 1:365
     %Here the evaluation of the radiosonde (Raso) data is done.
 
     Raso_1_read                 %Reads the Raso data of the actual day 'i' and writes it in a Raso-structure. 
-    %Raso_2_plot                %A very simple plot of the radiosonde
     Raso_3_layers               %Calculates mean RH for each subsaturated layer and calculates the sublimation/seeding
-    %Raso_3_plot_mass_diameter   %Overview plot for comparison
-    %Raso_3_plot_speed_diamter   %Overview plot for comparison
-    %Raso_4_plot_withlines      %A simple plot of the radiosonde, with lines indicating layers
-    layer=1;                   %Specify which subsaturated layer (layer nr starts counting from top) should be used in Raso_5_findposition 
-    %Raso_5_findposition        %Finds the distance/position of the radiosonde away from the radar
+    layer=1;                    %Specify which subsaturated layer (layer nr starts counting from top) should be used in Raso_5_findposition 
     Raso_6_advection            %Calculates the wind advection time
-    %Raso_6_advection_plot       %Makes the plot of the advection
-    
+     
     clear a c d d3 dhelp dlambda dN dN3 dphi folder idx idx_nonnan ii lambda1 lambda2 lambda3 lat1 lat2 ...
         lat3 lon1 lon2 lon3 phi1 phi2 phi3 tadv v3
     %%
     %6.Sublimation calculation plots 
 
-    %Sublimation_1_layer            %Plots each subsaturation layer into one separate figure (only one radius)
     %Sublimation_2_radii            %Plots multiple radii in one plot
 
     %Deleting variables that are not needed any more:
@@ -121,19 +114,12 @@ for i=1:365                                                %Loop, std: 1:365
     %%
     %7. Including Cloudnet (Radar) for evaluation
 
-    Cloudnet_2_read                     %Reads Cloudnet data and writes into structure 
-    %Cloudnet_2_plot                    %Plot: all Cloudnet data (radar reflectivity, doppler velocity, spectral width) of full day
-
+    Cloudnet_2_read                     %Reads Cloudnet data and writes into structure
     Cloudnet_2_short                    %Reduces the size of Cloudnet structure from 2000 to 400 time steps.
-    %Cloudnet_3_short_plot              %Plot of short Cloutnet time periode.
-
     Cloudnet_4_preparation_adv          %Data preparation: excludes cases where radar and radiosonde do not overlap in time, includes the advection
     Cloudnet_4_evaluation               %Evaluation of Cloudnet. (Defining if cloud above,in between, below)
     %Cloudnet_4_plot_sectionlines       %Overview plot
-    %Cloudnet_4_plot_lidar              %Lidar=ceilometer plot
-    %Cloudnet_4_plot_Zsens              %Radar Sensitivity 
-    %Cloudnet_4_plot_gasatten           %Gas attenuation
-    
+        
 end                                    %End of loop 
 
 %%
@@ -146,11 +132,8 @@ index=[1:365];                      %this can be modified if only a shorter time
 Evaluation_1_calc                   %finds indicies for the following pie/histogram plots.
 
 %Only Raso(=Radiosonde):
-Evaluation_2_pie                   %Raso-Pie plot                           
-%Evaluation_2_histogram             %Histogram using only Radiosonde.     
+Evaluation_2_pie                   %Raso-Pie plot                            
 %Evaluation_2_histogram_radii       %Histogram with all 3 radius in one.
-%Evaluation_2_histogram_Mshape      %Histogram with different ice crystal shapes
-%Evaluation_2_maxfalldist           %finds/calculates the maximum seeding distance
 %Evaluation_2_visual                %Reads and evaluates the manual visual detection
 
 %Deleting variables that are not needed any more:
@@ -165,33 +148,5 @@ clear Anz_0cloud Anz_1cloud Anz_both Anz_cloudcover Anz_Nan Anz_nonNan Anz_nonse
 %Raso and Radar (RC) combined:             
 Evaluation_4_RC_calc                        %Preparation of following plots (is included in the two following programs)
 Evaluation_4_RC_pie                         %Pie-plot        
-%Evaluation_4_RC_histogram                  %Histogram and removing of variables
 %Evaluation_4_RC_histogram_radii            %Histogram with all 3 radius in one
-%Evaluation_4_RC_histogram_radii_extrabar   %Histogram with all year as last column
-%Evaluation_4_RC_histogram_HK               %Heymsfield&Kajkawa
-%Evaluation_4_RC_histogram_M                %Mitchell
-
-%Evaluation_5_var_icecrystal
-%%
-%9. Skill scores:
-
-Skillscore_1_RasoRadar                                 %Paper nr1: Raso & Radar
-%Skillscore_2_ClassificationVisual                      %compare classification and visual
-Skillscore_3_NonseedingVisual                          %Paper nr2: non-seeding & visual
-%Skillscore_4_SeedingVisual                             %compare seeding & visual
-
-%sort plots into folders:
-%Results_1_sort_plots                                   %choose a case and the selected plots will be made   
-
-%%
-
-
-
-
-
-
-
-
-
-
 
