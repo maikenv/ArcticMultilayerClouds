@@ -41,7 +41,7 @@ Visual:        Manual visual detection taken from 'Inputdata/Visual.txt'
 
 Example: 
 Plot the pie chart for the 1-year analysed time period
-1. load('MLC_classification_100_msub100.mat')
+1. load('MLC_classification_r400MHP_WC.mat')
 2. uncomment Evaluation_4_RC_pie
 3. run 1make_MLC_classification
 
