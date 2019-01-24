@@ -12,7 +12,7 @@ suite.
 The main program is called 1make_MLC_classification. It creates a file containing the information of how many clouds could be
 found for each radiosonde profile and how many seeding/non-seeding cases exist. The input data for the classification must be
 stored in the folder Inputdata. You can choose if you want to evaluate an entire year by using the loop or only one single day.
-The results of each day from the loop are stored in the MLC_classification.mat file. The structure of the outputfile
+The results of each day from the loop are stored in the MLC_classification...mat file. The structure of the outputfile
 MLC_classification.mat is explained below.
 As soon as the file MLC_classification.mat is created the data can be further evaluated. To plot the data the specific
 plot-routine must be uncommented in 1make_MLC_classification and the main program 1make_MLC_classification must be run again. All
