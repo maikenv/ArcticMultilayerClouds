@@ -1,11 +1,11 @@
 
 READ ME
-written by Maiken Vassel, 2017-2018
+written by Maiken Vassel, 2017-2019
 
 The following programmes can be used to classify multilayer clouds based on radiosonde and radar data. They can be further
 separated in seeding and non-seeding multilayer cloud cases. Detailed information about the assumptions the classification
 algorithm is based on, and one example study using this algorithm can be found in the following publication: Vassel, M., Ickes,
-L., Maturilli, M., and Hoose, C.: Classification of Arctic multilayer clouds using radiosonde and radar data, Atmos. Chem. Phys.
+L., Maturilli, M., and Hoose, C.: Classification of Arctic multilayer clouds using radiosonde and radar data in Svalbard, Atmos. Chem. Phys.
 Discuss., https://doi.org/10.5194/acp-2018-774, in review, 2018. Please refer to this publication when using this programme
 suite. 
 
