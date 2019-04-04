@@ -1,6 +1,6 @@
 
 %%Arctic multilayer cloud detection algorithm
-%Written by Maiken Vassel, latest update 2018
+%Written by Maiken Vassel, latest update 2019
 
 %This is the main program of the classification algorithm. Here the dataset is analysed for
 %seeding/non-seeding multilayer clouds from day to day.
